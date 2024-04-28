@@ -1,0 +1,101 @@
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.profile-display {
+  margin-bottom: 20px;
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info h2 {
+  margin: 5px 0;
+}
+
+.profile-info p {
+  margin: 0;
+}
+
+.interactive-map {
+  margin-bottom: 20px;
+}
+
+.error {
+  color: red;
+}
+
+.admin-panel {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.admin-panel h2 {
+  margin-bottom: 10px;
+}
+
+.admin-panel input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.admin-panel ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.admin-panel li {
+  margin-bottom: 10px;
+}
+
+.admin-panel button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.admin-panel button:hover {
+  background-color: #0056b3;
+}
