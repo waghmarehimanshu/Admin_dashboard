@@ -1,0 +1,42 @@
+// ProfileForm.js
+
+import React, { useState } from 'react';
+
+const ProfileForm = ({ profile, onSubmit }) => {
+  const [formData, setFormData] = useState(profile || { name: '', description: '' });
+  const [error, setError] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Validation check for required fields
+    if (!formData.name || !formData.description) {
+      setError('Name and description are required.');
+      return;
+    }
+    // Clear error state if no validation errors
+    setError('');
+    onSubmit(formData);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input type="text" name="name" value={formData?.name} onChange={handleChange} />
+      </label>
+      <label>
+        Description:
+        <input type="text" name="description" value={formData?.description} onChange={handleChange} />
+      </label>
+      {error && <div className="error">{error}</div>}
+      <button type="submit">Save</button>
+    </form>
+  );
+};
+
+export default ProfileForm;
